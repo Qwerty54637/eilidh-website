@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eilidh Evans Director</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
+</head> 
+<body>
+    <div class="expand-overlay" onclick="unexpand();"></div>
+    <div class ="expanded-tile" 
+    style="background-image: url(media/cover.jpg); 
+    aspect-ratio: auto; width: 98vw;
+    margin-top: -49vh;
+    margin-left: -49vw;
+    background-size: contain;">
+            <div class = "close-button" onclick="unexpand();">&#x2716;</div>
+            <div class = "left-button" onclick="previous_slide();">&#10094;</div>
+            <div class = "right-button" onclick="next_slide();">&#10095;</div>
+    </div>
+
+    <div class = "navbar">
+        <div class = "buffer">1</div>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="theatre.html">THEATRE</a>
+        <a href="film.html">FILM</a>
+        <a href="facilitation.html">FACILITATION</a>
+        <a href="contact.html">CONTACT</a>
+        <div class = "buffer">2</div>
+    </div>
+    <h1>Hansel & Gretel - a nightmare</h1>
+    <h2>Writer / Director | Mountview, 2024</h2>
+    <div class = "role-bar">
+        <div class = "buffer">1</div>
+        <button id = "focused" onclick="mediaSelect('production')">Production Photography</button>
+        <button onclick="mediaSelect('rehearsal')">Rehearsal Photography</button>
+        <!-- <button onclick="mediaSelect('video')">Video</button> -->
+        <div class = "buffer">2</div>
+    </div>
+
+    <div class="media-grid">
+        <img class = "media production" src = "media/hansel-gretel/slide_p_0.jpg" onclick="expand(0,0);">
+        <img class = "media production" src = "media/hansel-gretel/slide_p_1.jpg" onclick="expand(0,1);">
+        <img class = "media production" src = "media/hansel-gretel/slide_p_2.jpg" onclick="expand(0,2);">
+        <img class = "media production" src = "media/hansel-gretel/slide_p_3.jpg" onclick="expand(0,3);">
+        <img class = "media production" src = "media/hansel-gretel/slide_p_4.jpg" onclick="expand(0,4);">
+        <img class = "media production" src = "media/hansel-gretel/slide_p_5.jpg" onclick="expand(0,5);">
+        <img class = "media production" src = "media/hansel-gretel/slide_p_6.jpg" onclick="expand(0,6);">
+        <img class = "media production" src = "media/hansel-gretel/slide_p_7.jpg" onclick="expand(0,7);">
+        <img class = "media production" src = "media/hansel-gretel/slide_p_8.jpg" onclick="expand(0,8);">
+        <img class = "media production" src = "media/hansel-gretel/slide_p_9.jpg" onclick="expand(0,9);">
+        <!-- Rehearsal Week 1 -->
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_0.jpg" onclick="expand(1,0);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_1.jpg" onclick="expand(1,1);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_2.jpg" onclick="expand(1,2);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_3.jpg" onclick="expand(1,3);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_4.jpg" onclick="expand(1,4);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_5.jpg" onclick="expand(1,5);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_6.jpg" onclick="expand(1,6);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_7.jpg" onclick="expand(1,7);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_8.jpg" onclick="expand(1,8);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_9.jpg" onclick="expand(1,9);">
+        <!-- Rehearsal Week 2 -->
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_10.jpg" onclick="expand(1,10);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_11.jpg" onclick="expand(1,11);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_12.jpg" onclick="expand(1,12);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_13.jpg" onclick="expand(1,13);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_14.jpg" onclick="expand(1,14);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_15.jpg" onclick="expand(1,15);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_16.jpg" onclick="expand(1,16);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_17.jpg" onclick="expand(1,17);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_18.jpg" onclick="expand(1,18);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_19.jpg" onclick="expand(1,19);">
+        <!-- Rehearsal Week 3 -->
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_20.jpg" onclick="expand(1,20);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_21.jpg" onclick="expand(1,21);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_22.jpg" onclick="expand(1,22);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_23.jpg" onclick="expand(1,23);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_24.jpg" onclick="expand(1,24);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_25.jpg" onclick="expand(1,25);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_26.jpg" onclick="expand(1,26);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_27.jpg" onclick="expand(1,27);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_28.jpg" onclick="expand(1,28);">
+        <img class = "media rehearsal" src = "media/hansel-gretel/slide_r_29.jpg" onclick="expand(1,29);">
+    </div>
+
+    <h3>by Eilidh Evans</h3>
+    <h3>Assoc Choreographer | Teagan Gough</h3> 
+    <h3>Designer | Davy Stringer</h3>
+    <h3>Lighting | Ryan Littler</h3>
+    <h3>Sound | Lemar Moller</h3>
+    <h3>DOP | Theo Birakos</h3>
+    <h3>Video Editor | Teagan Gough</h3>
+    <h3>Puppetry | Daisy</h3>
+    <h3>Producer | Juliet Johnson</h3>
+    <h3>Stage Manager | Emily Stinpson</h3>
+    <h3>[Production] Photography | Jamie Graham</h3>
+    <h3>[Rehearsals] Photography | Fiona Winning / Harrison Sharpe / Theo Birakos</h3>
+
+    <div class = "footer">© 2025, Eilidh Evans. All rights reserved. &emsp; &emsp;Website designed by Portfolio Pages.</div>
+
+    <script>
+        const max_index = [10,20,0];
+        var current_media = [0,0];
+
+        function updateExpandedImage(code,img_no){
+            if (code == 0){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/hansel-gretel/slide_p_"+img_no+".jpg)";
+            } else if (code == 1){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/hansel-gretel/slide_r_"+img_no+".jpg)";
+            } else if (code == 2){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/hansel-gretel/slide_v_"+img_no+".mp4)";
+            }
+        }
+    </script>
+    
+    <!-- <script>
+    
+    // let tiles = document.querySelectorAll(".tile");
+
+    document.getElementById("focused").click();
+    document.getElementById("focused").focus();
+    function mediaSelect(selected) {
+        let medias = document.querySelectorAll(".media"); 
+        medias.forEach(item => {
+            if (selected == "all" || item.classList.contains(selected)) {
+                item.style.display = "flex";
+            } else {
+                item.style.display = "none";
+            }
+            })
+    }
+
+    function set_current_media(code,img_no){
+        current_media = [code,img_no];
+    }
+
+    function next_slide(){
+        let code = current_media[0];
+        let img_no = current_media[1];
+        let x = (img_no + 1) % max_index[code];
+        set_current_media(code,x);
+        updateExpandedImage(code,x);
+    }
+
+    function previous_slide(){
+        let code = current_media[0];
+        let img_no = current_media[1];
+        let x = img_no - 1;
+        if (x < 0) {x += max_index[code]};
+        set_current_media(code,x);
+        updateExpandedImage(code,x);
+    }
+
+    function unexpand() {
+        // deactivate overlay:
+        document.querySelector('.expanded-tile').classList.remove('active');
+        document.querySelector('.expand-overlay').classList.remove('active');
+        document.querySelector('.left-button').classList.remove('active');
+        document.querySelector('.right-button').classList.remove('active');
+        document.querySelector('.close-button').classList.remove('active');
+    }
+
+    function expand(code, img_no) {
+        document.querySelector('.expand-overlay').classList.add('active');
+        set_current_media(code, img_no);
+        updateExpandedImage(code, img_no)
+        document.querySelector('.expanded-tile').classList.add('active');
+        document.querySelector('.left-button').classList.add('active');
+        document.querySelector('.right-button').classList.add('active');
+        document.querySelector('.close-button').classList.add('active');
+    }
+
+    </script> -->
+    
+</body>
+
+</html>

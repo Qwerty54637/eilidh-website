@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eilidh Evans Director</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- <script src="script.js" defer></script> -->
+</head> 
+<body>
+    <div class = "navbar">
+        <div class = "buffer">1</div>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="theatre.html">THEATRE</a>
+        <a href="film.html">FILM</a>
+        <a href="facilitation.html">FACILITATION</a>
+        <a href="contact.html">CONTACT</a>
+        <div class = "buffer">2</div>
+    </div>
+    <h1>FILM</h1>
+
+    <div class = "role-bar">
+        <div class = "buffer">1</div>
+        <button onclick="roleSelect('all')">All</button>
+        <button onclick="roleSelect('director')">Director</button>
+        <button onclick="roleSelect('assistant')">Assistant Director</button>
+        <!-- <button onclick="roleSelect('associate')">Associate Director</button> -->
+        <div class = "buffer">2</div>
+    </div>
+
+    <div class="tile-grid">
+        <div class = "tile assistant" onclick="location.href='beth-complex.html';" style="background-image: url(media/film/tile_3.jpg);">
+            <h1>The Beth Complex</h1>
+            <h2>2nd AD | Short Film | 2025</h2>
+        </div>
+        <div class = "tile assistant" onclick="location.href='cloudfall.html';" style="background-image: url(media/film/tile_2.jpg);">
+            <h1>Cloudfall</h1>
+            <h2>1st AD | Short Film | 2024</h2>
+        </div>
+        <div class = "tile director" onclick="location.href='lady-birds.html';" style="background-image: url(media/film/tile_1.jpg);">
+            <h1>LADY BIRDS</h1>
+            <h2>Writer / Director | Short Film | 2023</h2>
+        </div>
+        <div class = "tile director" onclick="location.href='ceramic-flowers.html';" style="background-image: url(media/film/tile_0.jpg);">
+            <h1>Ceramic Flowers</h1>
+            <h2>Director | Short Film | 2022</h2>
+        </div>
+    </div>
+
+    <div class = "footer">© 2025, Eilidh Evans. All rights reserved. &emsp; &emsp;Website designed by Portfolio Pages.</div>
+
+    <!-- <div class = "role-bar">
+        <div class = "buffer">1</div>
+        <button onclick="roleSelect('all')">All</button>
+        <button onclick="roleSelect('director')">Director</button>
+        <button onclick="roleSelect('assistant')">Assistant Director</button>
+        <div class = "buffer">2</div>
+    </div> -->
+
+    <script>
+    function roleSelect(role) {
+        let tiles = document.querySelectorAll(".tile"); 
+        tiles.forEach(item => {
+            if (role == "all" || item.classList.contains(role)) {
+                item.style.display = "flex";
+            } else {
+                item.style.display = "none";
+            }
+            })
+    }
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eilidh Evans Director</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
+</head> 
+<body>
+    <div class="expand-overlay" onclick="unexpand();"></div>
+    <div class ="expanded-tile" style="background-image: url(media/cover.jpg);">
+            <div class = "close-button" onclick="unexpand();">&times;</div>
+            <div class = "left-button" onclick="previous_slide(6);">&#10094;</div>
+            <div class = "right-button" onclick="next_slide(6);">&#10095;</div>
+    </div>
+
+    <div class = "navbar">
+        <div class = "buffer">1</div>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="theatre.html">THEATRE</a>
+        <a href="film.html">FILM</a>
+        <a href="facilitation.html">FACILITATION</a>
+        <a href="contact.html">CONTACT</a>
+        <div class = "buffer">2</div>
+    </div>
+    <h1>THEATRE</h1>
+    <div class = "role-bar">
+        <div class = "buffer">1</div>
+        <button onclick="roleSelect('all')">All</button>
+        <button onclick="roleSelect('director')">Director</button>
+        <button onclick="roleSelect('assistant')">Assistant Director</button>
+        <button onclick="roleSelect('associate')">Associate Director</button>
+        <div class = "buffer">2</div>
+    </div>
+    <div class="tile-grid">
+        <div class = "tile associate" onclick="location.href='dirty-rotten.html';" style="background-image: url(media/theatre/tile_9.jpg);">
+            <h1 style="text-transform: none;">DIRTY ROTTEN SCOUNDRELS | in concert</h1>
+            <h2>Associate Director | London Palladium / Tokyu Theatre Orb | 2025</h2>
+        </div>
+        <div class = "tile director" onclick="location.href='things-we-forget.html';" style="background-image: url(media/theatre/tile_8.jpg);">
+            <h1>The Things We Forget to Change</h1>
+            <h2>Director | Blue Orange Theatre | 2025</h2>
+        </div>
+        <div class = "tile director" onclick="location.href='invader.html';" style="background-image: url(media/theatre/tile_7.jpg);"> <!-- 7-->
+            <h1>Invader</h1>
+            <h2>Director | The Union Theatre | 2025</h2>
+        </div>
+        <div class = "tile assistant" onclick="location.href='songs-new-world.html';" style="background-image: url(media/theatre/tile_6.jpg);">
+            <h1>Songs for a New World</h1>
+            <h2>Assistant Director | Mountview | 2025</h2>
+        </div>
+        <div class = "tile assistant" onclick="location.href='society-new-cuisine.html';" style="background-image: url(media/theatre/tile_5.jpg);">
+            <h1>The Society for New Cuisine</h1>
+            <h2>Assistant Director | Omnibus Theatre & Norden Farm | 2025</h2>
+        </div>
+        <div class="tile assistant" onclick="location.href='momento-mori.html';" style="background-image: url(media/theatre/tile_4.jpg);">
+            <h1>Momento Mori</h1>
+            <h2>Trainee Assistant Director | Highgate Cemetery | 2024</h2>
+        </div>
+        <div class = "tile director" onclick="location.href='hansel-gretel.html';" style="background-image: url(media/theatre/tile_3.jpg);">
+            <h1>Hansel & Gretel - a nightmare</h1>
+            <h2>Writer & Director | Mountview | 2024</h2>
+        </div>
+        <div class = "tile assistant" onclick="location.href='global-majority.html';" style="background-image: url(media/theatre/tile_2.jpg);">
+            <h1>Global Majority</h1>
+            <h2>Assistant Director | Norden Farm & Attenborough Arts Centre | 2024</h2>
+        </div>
+        <div class="tile assistant" onclick="location.href='six-characters.html';" style="background-image: url(media/theatre/tile_1.jpg);">
+            <h1>SIX CHARACTERS IN SEARCH OF AN AUTHOR</h1>
+            <h2>Assistant Director | Mountview | 2024</h2>
+        </div>
+        <div class="tile assistant" onclick="location.href='it-accordian-shop.html';" style="background-image: url(media/theatre/tile_0.jpg);">
+            <h1>THE IT & ACCORDION SHOP</h1>
+            <h2>Assistant Director | Mountview | 2023</h2>
+        </div>
+    </div>
+
+    <div class = "footer">© 2025, Eilidh Evans. All rights reserved. &emsp; &emsp;Website designed by Portfolio Pages.</div>
+
+    <!-- <div class = "role-bar">
+        <div class = "buffer">1</div>
+        <button onclick="roleSelect('all')">All</button>
+        <button onclick="roleSelect('director')">Director</button>
+        <button onclick="roleSelect('assistant')">Assistant Director</button>
+        <button onclick="roleSelect('associate')">Associate Director</button>
+        <div class = "buffer">2</div>
+    </div> -->
+    <!-- <script>
+    function roleSelect(role) {
+        let tiles = document.querySelectorAll(".tile"); 
+        tiles.forEach(item => {
+            if (role == "all" || item.classList.contains(role)) {
+                item.style.display = "flex";
+            } else {
+                item.style.display = "none";
+            }
+            })
+    }
+    </script>
+    
+    <script>
+    
+    let tiles = document.querySelectorAll(".tile");
+
+    const current_index = [0,0,0,0,0,0,0];
+    const max_index = [1,1,1,1,1,1,5]; // number of slides per tile - 1
+    var current_tile;
+
+    function set_current_tile(tile_no){
+        current_tile = tile_no;
+    }
+
+    function next_slide(){
+        let tile_no = current_tile;
+        let x = (current_index[tile_no] + 1) % max_index[tile_no];
+        current_index[tile_no] = x;
+        updateExpandedImage(tile_no,x);
+        // changeImage(tile_no,x);
+    }
+
+    function previous_slide(){
+        let tile_no = current_tile;
+        let x = (current_index[tile_no] - 1);
+        if (x < 0) {x += max_index[tile_no]};
+        current_index[tile_no] = x;
+        updateExpandedImage(tile_no,x);
+        // changeImage(tile_no,x);
+    }
+
+    // function changeImage(tile_no,img_no){
+    //     tile = document.getElementById("tile"+tile_no);
+    //     tile.style.backgroundImage = "url(media/slides/slide_"+tile_no+"_"+img_no+".JPG)";
+    // }
+
+    function updateExpandedImage(tile_no,img_no){
+        document.querySelector('.expanded-tile').style.backgroundImage = "url(media/theatre/slide_"+tile_no+"_"+img_no+".JPG)";
+    }
+
+    function unexpand() {
+        // deactivate overlay:
+        document.querySelector('.expanded-tile').classList.remove('active');
+        document.querySelector('.expand-overlay').classList.remove('active');
+        document.querySelector('.left-button').classList.remove('active');
+        document.querySelector('.right-button').classList.remove('active');
+        document.querySelector('.close-button').classList.remove('active');
+        // tiles.forEach(tile => {
+        //     tile.classList.remove('expanded');
+        // });
+    }
+
+    function expand(tile_no) {
+        document.querySelector('.expand-overlay').classList.add('active');
+        set_current_tile(tile_no);
+        updateExpandedImage(tile_no,0)
+        document.querySelector('.expanded-tile').classList.add('active');
+        document.querySelector('.left-button').classList.add('active');
+        document.querySelector('.right-button').classList.add('active');
+        document.querySelector('.close-button').classList.add('active');
+    }
+
+    </script> -->
+    
+</body>
+
+</html>

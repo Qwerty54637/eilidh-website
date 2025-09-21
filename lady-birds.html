@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eilidh Evans Director</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
+</head> 
+<body>
+    <div class="expand-overlay" onclick="unexpand();"></div>
+    <div class ="expanded-tile" 
+    style="background-image: url(media/cover.jpg); 
+    aspect-ratio: auto; width: 98vw;
+    margin-top: -49vh;
+    margin-left: -49vw;
+    background-size: contain;">
+            <div class = "close-button" onclick="unexpand();">&#x2716;</div>
+            <div class = "left-button" onclick="previous_slide();">&#10094;</div>
+            <div class = "right-button" onclick="next_slide();">&#10095;</div>
+    </div>
+
+    <div class = "navbar">
+        <div class = "buffer">1</div>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="theatre.html">THEATRE</a>
+        <a href="film.html">FILM</a>
+        <a href="facilitation.html">FACILITATION</a>
+        <a href="contact.html">CONTACT</a>
+        <div class = "buffer">2</div>
+    </div>
+    <h1>Lady Birds</h1>
+    <h2>Writer / Director, 2023</h2>
+    <div class = "role-bar">
+        <div class = "buffer">1</div>
+        <button id = "focused" style="font-size: x-large;">Production Photography</button>
+        <!-- <button onclick="mediaSelect('rehearsal')">Rehearsal Photography</button>
+        <button onclick="mediaSelect('video')">Video</button> -->
+        <div class = "buffer">2</div>
+    </div>
+
+    <div class="media-grid">
+        <img class = "media production" src = "media/lady-birds/slide_p_0.jpg" onclick="expand(0,0);">
+        <img class = "media production" src = "media/lady-birds/slide_p_1.jpg" onclick="expand(0,1);">
+        <img class = "media production" src = "media/lady-birds/slide_p_2.jpg" onclick="expand(0,2);">
+        <img class = "media production" src = "media/lady-birds/slide_p_3.jpg" onclick="expand(0,3);">
+        <img class = "media production" src = "media/lady-birds/slide_p_4.jpg" onclick="expand(0,4);">
+        <img class = "media production" src = "media/lady-birds/slide_p_5.jpg" onclick="expand(0,5);">
+        <img class = "media production" src = "media/lady-birds/slide_p_6.jpg" onclick="expand(0,6);">
+        <img class = "media production" src = "media/lady-birds/slide_p_7.jpg" onclick="expand(0,7);">
+        <img class = "media production" src = "media/lady-birds/slide_p_8.jpg" onclick="expand(0,8);">
+        <img class = "media production" src = "media/lady-birds/slide_p_9.jpg" onclick="expand(0,9);">
+        <img class = "media production" src = "media/lady-birds/slide_p_10.jpg" onclick="expand(0,10);">
+        <img class = "media production" src = "media/lady-birds/slide_p_11.jpg" onclick="expand(0,11);">
+        <img class = "media production" src = "media/lady-birds/slide_p_12.jpg" onclick="expand(0,12);">
+        <img class = "media production" src = "media/lady-birds/slide_p_13.jpg" onclick="expand(0,13);">
+        <img class = "media production" src = "media/lady-birds/slide_p_14.jpg" onclick="expand(0,14);">
+        <img class = "media production" src = "media/lady-birds/slide_p_15.jpg" onclick="expand(0,15);">
+        <img class = "media production" src = "media/lady-birds/slide_p_16.jpg" onclick="expand(0,16);">
+        <img class = "media production" src = "media/lady-birds/slide_p_17.jpg" onclick="expand(0,17);">
+        <img class = "media production" src = "media/lady-birds/slide_p_18.jpg" onclick="expand(0,18);">
+    </div>
+
+    <h3>a film by Eilidh Evans</h3>
+    <h3>Cinematographers | Megan Bowron & Lila Wattis</h3>
+    <h3>Producer | Jenifer Hoskins</h3>
+    <h3>Editor | Alicia Graham</h3>
+    <h3>Sound | Sophie Murdin / Connor James Reid / Monet Page</h3>
+    <h3>Boom Operator | Loz Pontone / Monet Page / Connor James Reid</h3>
+    <h3>Light | Evelina Black / Monet Page / Connor James Reid</h3>
+    <h3>Runners | Emma Osborne & Keyaa Kothari</h3>
+    <h3>Prop Designer | Dulcie Good</h3>
+    <h3>Composer | George Chapman</h3>
+    <h3>Assistant Directors | Rhiya Laycock & Charlotte Baxter</h3>
+    <h3>Executive Producers | Monet Page / Connor James Reid / Anna Symonds / Annabelle Dainton / Esme Redrup</h3>
+
+    <div class = "footer">© 2025, Eilidh Evans. All rights reserved. &emsp; &emsp;Website designed by Portfolio Pages.</div>
+
+    <script>
+        const max_index = [19,0,0];
+        var current_media = [0,0];
+
+        function updateExpandedImage(code,img_no){
+            if (code == 0){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/lady-birds/slide_p_"+img_no+".jpg)";
+            } else if (code == 1){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/lady-birds/slide_r_"+img_no+".jpg)";
+            } else if (code == 2){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/lady-birds/slide_v_"+img_no+".mp4)";
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

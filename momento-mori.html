@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eilidh Evans Director</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
+</head> 
+<body>
+    <div class="expand-overlay" onclick="unexpand();"></div>
+    <div class ="expanded-tile" 
+    style="background-image: url(media/cover.jpg); 
+    aspect-ratio: auto; width: 98vw;
+    margin-top: -49vh;
+    margin-left: -49vw;
+    background-size: contain;">
+            <div class = "close-button" onclick="unexpand();">&#x2716;</div>
+            <div class = "left-button" onclick="previous_slide();">&#10094;</div>
+            <div class = "right-button" onclick="next_slide();">&#10095;</div>
+    </div>
+
+    <div class = "navbar">
+        <div class = "buffer">1</div>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="theatre.html">THEATRE</a>
+        <a href="film.html">FILM</a>
+        <a href="facilitation.html">FACILITATION</a>
+        <a href="contact.html">CONTACT</a>
+        <div class = "buffer">2</div>
+    </div>
+    <h1>Momento Mori</h1>
+    <h2>Trainee Assistant Director | Highgate Cemetery, 2024</h2>
+    <div class = "role-bar">
+        <div class = "buffer">1</div>
+        <button id = "focused" style="font-size: x-large;">Production Photography</button>
+        <div class = "buffer">2</div>
+    </div>
+
+    <div class = "media-row">
+        <div class = "media-column">
+            <img class = "media production" src = "media/momento-mori/slide_p_0.jpg" onclick="expand(0,0);">
+            <img class = "media production" src = "media/momento-mori/slide_p_4.jpg" onclick="expand(0,4);">
+        </div>
+        <div class = "media-column">
+            <img class = "media production" src = "media/momento-mori/slide_p_1.jpg" onclick="expand(0,1);">
+            <img class = "media production" src = "media/momento-mori/slide_p_5.jpg" onclick="expand(0,5);">
+        </div>
+        <div class = "media-column">
+            <img class = "media production" src = "media/momento-mori/slide_p_2.jpg" onclick="expand(0,2);">
+        </div>
+        <div class = "media-column">
+            <img class = "media production" src = "media/momento-mori/slide_p_3.jpg" onclick="expand(0,3);">
+        </div>
+    </div>
+
+    <h3>by Geraldine Pilgrim</h3>
+    <h3>Composer | Felix Cross</h3>
+    <h3>Designer | Ania Levy</h3>
+    <h3>Choir Director | Allyson Devenish</h3>
+    <h3>Movement | Sarah April Lamb</h3>
+    <h3>Photography | Robin Savage</h3>
+
+    <div class = "footer">© 2025, Eilidh Evans. All rights reserved. &emsp; &emsp;Website designed by Portfolio Pages.</div>
+
+    <script>
+        const max_index = [6,0,0];
+        var current_media = [0,0];
+
+        function updateExpandedImage(code,img_no){
+            if (code == 0){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/momento-mori/slide_p_"+img_no+".jpg)";
+            } else if (code == 1){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/momento-mori/slide_r_"+img_no+".jpg)";
+            } else if (code == 2){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/momento-mori/slide_v_"+img_no+".mp4)";
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

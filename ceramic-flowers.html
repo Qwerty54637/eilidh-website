@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eilidh Evans Director</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
+</head> 
+<body>
+    <div class="expand-overlay" onclick="unexpand();"></div>
+    <div class ="expanded-tile" 
+    style="background-image: url(media/cover.jpg); 
+    aspect-ratio: auto; width: 98vw;
+    margin-top: -49vh;
+    margin-left: -49vw;
+    background-size: contain;">
+            <div class = "close-button" onclick="unexpand();">&#x2716;</div>
+            <div class = "left-button" onclick="previous_slide();">&#10094;</div>
+            <div class = "right-button" onclick="next_slide();">&#10095;</div>
+    </div>
+
+    <video id = "video" class="expanded-video" controls>
+        <source id="video-src" src="media/ceramic-flowers/vid_0.mp4"
+        type='video/mp4'>
+    </video>
+
+    <div class = "navbar">
+        <div class = "buffer">1</div>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="theatre.html">THEATRE</a>
+        <a href="film.html">FILM</a>
+        <a href="facilitation.html">FACILITATION</a>
+        <a href="contact.html">CONTACT</a>
+        <div class = "buffer">2</div>
+    </div>
+    <h1>Ceramic Flowers</h1>
+    <h2>Director, 2022</h2>
+    <div class = "role-bar">
+        <div class = "buffer">1</div>
+        <button id = "focused" style="font-size: x-large;">Video</button>
+        <!-- <button onclick="mediaSelect('rehearsal')">Rehearsal Photography</button>
+        <button onclick="mediaSelect('video')">Video</button> -->
+        <div class = "buffer">2</div>
+    </div>
+
+    <div class="media-grid">
+        <img class = "media video" src = "media/ceramic-flowers/slide_v_0.jpg" onclick="expandVid(0);">
+    </div>
+
+    <h3>Writer | Eleanor Pidgeon</h3>
+    <h3>Directors | Eilidh Evans / Eleanor Pidgeon</h3>
+    <h3>Producer | Alma Busch</h3>
+    <h3>DOP | Issy Hatton-Williams</h3>
+    <h3>Sound | Annaelle Sourisseau and Sejal Dholakia</h3>
+    <h3>Boom Operators | Sejal Dholakia and Caitlin Mear</h3>
+    <h3>Sound | Caitlin Mear</h3>
+    <h3>Editor | Harry Mayman</h3>
+    <h3>Assistant Editor | Anna Symonds</h3>
+    <h3>Art by Phoebe Graham</h3>
+    <h3>Set Supervisor | Monet Page</h3>
+    <h3>Executive Producers | Monet Page / Connor James Reid / Anna Symonds / Annabelle Dainton / Esme Redrup / Aidan Rhode</h3>
+
+    <div class = "footer">© 2025, Eilidh Evans. All rights reserved. &emsp; &emsp;Website designed by Portfolio Pages.</div>
+
+    <script>
+        const max_index = [0,0,1];
+        var current_media = [0,0];
+
+        function updateExpandedImage(code,img_no){
+            if (code == 0){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/ceramic-flowers/slide_p_"+img_no+".jpg)";
+            } else if (code == 1){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/ceramic-flowers/slide_r_"+img_no+".jpg)";
+            } else if (code == 2){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/ceramic-flowers/slide_v_"+img_no+".mp4)";
+            }
+        }
+
+        function expandVid(vid_no){
+            document.querySelector('.expand-overlay').classList.add('active');
+            set_current_media(2, vid_no);
+            document.querySelector('.expanded-video').classList.add('active');
+            document.getElementById("video-src").setAttribute("src", "media/ceramic-flowers/vid_"+vid_no+".mp4");
+            document.getElementById("video").load();
+            document.querySelector('.close-button').classList.add('active');
+        }
+    </script>
+    
+</body>
+
+</html>

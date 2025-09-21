@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eilidh Evans Director</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
+</head> 
+<body>
+    <div class="expand-overlay" onclick="unexpand();"></div>
+    <div class ="expanded-tile" 
+    style="background-image: url(media/cover.jpg); 
+    aspect-ratio: auto; width: 98vw;
+    margin-top: -49vh;
+    margin-left: -49vw;
+    background-size: contain;">
+            <div class = "close-button" onclick="unexpand();">&#x2716;</div>
+            <div class = "left-button" onclick="previous_slide();">&#10094;</div>
+            <div class = "right-button" onclick="next_slide();">&#10095;</div>
+    </div>
+
+    <div class = "navbar">
+        <div class = "buffer">1</div>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="theatre.html">THEATRE</a>
+        <a href="film.html">FILM</a>
+        <a href="facilitation.html">FACILITATION</a>
+        <a href="contact.html">CONTACT</a>
+        <div class = "buffer">2</div>
+    </div>
+    <h1>INVADER</h1>
+    <h2>Director | The Union Theatre, 2025</h2>
+    <div class = "role-bar">
+        <div class = "buffer">1</div>
+        <button id = "focused" onclick="mediaSelect('production')">Production Photography</button>
+        <!-- <button onclick="mediaSelect('rehearsal')">Rehearsal Photography</button>
+        <button onclick="mediaSelect('video')">Video</button> -->
+        <div class = "buffer">2</div>
+    </div>
+
+    <div class = "media-row">
+        <div class = "media-column">
+            <img class = "media production" src = "media/invader/slide_p_0.jpg" onclick="expand(0,0);">
+            <img class = "media production" src = "media/invader/slide_p_4.jpg" onclick="expand(0,4);">
+            <img class = "media production" src = "media/invader/slide_p_8.jpg" onclick="expand(0,8);">
+        </div>
+        <div class = "media-column">
+            <img class = "media production" src = "media/invader/slide_p_1.jpg" onclick="expand(0,1);">
+            <img class = "media production" src = "media/invader/slide_p_5.jpg" onclick="expand(0,5);">
+            <img class = "media production" src = "media/invader/slide_p_9.jpg" onclick="expand(0,8);">
+        </div>
+        <div class = "media-column">
+            <img class = "media production" src = "media/invader/slide_p_2.jpg" onclick="expand(0,2);">
+            <img class = "media production" src = "media/invader/slide_p_6.jpg" onclick="expand(0,6);">
+            <img class = "media production" src = "media/invader/slide_p_10.jpg" onclick="expand(0,10);">
+        </div>
+        <div class = "media-column">
+            <img class = "media production" src = "media/invader/slide_p_3.jpg" onclick="expand(0,3);">
+            <img class = "media production" src = "media/invader/slide_p_7.jpg" onclick="expand(0,7);">
+            <img class = "media production" src = "media/invader/slide_p_11.jpg" onclick="expand(0,11);">
+        </div>
+    </div>
+
+    <!-- <h3>by Geraldine Pilgrim</h3>
+    <h3>Composer | Felix Cross</h3>
+    <h3>Designer | Ania Levy</h3>
+    <h3>Choir Director | Allyson Devenish</h3>
+    <h3>Movement | Sarah April Lamb</h3>
+    <h3>Photography | Robin Savage</h3> -->
+
+    <div class = "footer">© 2025, Eilidh Evans. All rights reserved. &emsp; &emsp;Website designed by Portfolio Pages.</div>
+
+    <script>
+        const max_index = [12,0,0];
+        var current_media = [0,0];
+
+        function updateExpandedImage(code,img_no){
+            if (code == 0){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/invader/slide_p_"+img_no+".jpg)";
+            } else if (code == 1){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/invader/slide_r_"+img_no+".jpg)";
+            } else if (code == 2){
+                document.querySelector('.expanded-tile').style.backgroundImage = "url(media/invader/slide_v_"+img_no+".mp4)";
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

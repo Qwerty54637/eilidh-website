@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eilidh Evans Director</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
+</head> 
+
+<body>
+    <div class="expand-overlay" onclick="unexpand();"></div>
+    <div class ="expanded-tile" 
+    style="background-image: url(media/cover.jpg); 
+    aspect-ratio: auto; width: 98vw;
+    margin-top: -49vh;
+    margin-left: -49vw;
+    background-size: contain;">
+            <div class = "close-button" onclick="unexpand();">&#x2716;</div>
+            <div class = "left-button" onclick="previous_slide();">&#10094;</div>
+            <div class = "right-button" onclick="next_slide();">&#10095;</div>
+    </div>
+
+    <div class = "navbar">
+        <div class = "buffer">1</div>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="theatre.html">THEATRE</a>
+        <a href="film.html">FILM</a>
+        <a href="facilitation.html">FACILITATION</a>
+        <a href="contact.html">CONTACT</a>
+        <div class = "buffer">2</div>
+    </div>
+    <h1>The Beth Complex</h1>
+    <h2>2nd AD, 2025</h2>
+    <div class = "role-bar">
+        <div class = "buffer">1</div>
+        <button id = "focused" style="font-size: x-large;">BTS Photography</button>
+        <!-- <button onclick="mediaSelect('rehearsal')">Rehearsal Photography</button>
+        <button onclick="mediaSelect('video')">Video</button> -->
+        <div class = "buffer">2</div>
+    </div>
+
+    <div class="media-row">
+        <div class="media-column">
+            <img class = "media production" src = "media/beth-complex/slide_p_0.jpg" onclick="expand(0,0);">
+            <img class = "media production" src = "media/beth-complex/slide_p_4.jpg" onclick="expand(0,4);">
+            <img class = "media production" src = "media/beth-complex/slide_p_7.jpg" onclick="expand(0,7);">
+        </div>
+        <div class="media-column">
+            <img class = "media production" src = "media/beth-complex/slide_p_1.jpg" onclick="expand(0,1);">
+            <img class = "media production" src = "media/beth-complex/slide_p_5.jpg" onclick="expand(0,5);">
+            <img class = "media production" src = "media/beth-complex/slide_p_8.jpg" onclick="expand(0,8);">
+        </div>
+        <div class="media-column">
+            <img class = "media production" src = "media/beth-complex/slide_p_2.jpg" onclick="expand(0,2);">
+            <img class = "media production" src = "media/beth-complex/slide_p_9.jpg" onclick="expand(0,9);">
+            <img class = "media production" src = "media/beth-complex/slide_p_10.jpg" onclick="expand(0,10);">
+        </div>
+        <div class="media-column">
+            <img class = "media production" src = "media/beth-complex/slide_p_3.jpg" onclick="expand(0,3);">
+            <img class = "media production" src = "media/beth-complex/slide_p_6.jpg" onclick="expand(0,6);">
+        </div>
+    </div>
+
+    <h3>Writer / Director | Maggie Dickinson</h3>
+    <h3>Producer | Cate Johannessen</h3>
+    <h3>DOP | Luke Collins</h3>
+    <h3>Gaffer | Hishanth Jegathasan</h3>
+    <h3>Sound | Ryzie</h3>
+    <h3>1st AD | Xoana Walker Whitelaw</h3>
+    <h3>2nd AD | Eilidh Evans</h3>
+    <h3>1st AC | Ada Wesolowska</h3>
+    <h3>2nd AC | Zenithi Barra</h3>
+    <h3>Spark | Bene Wanya</h3>
+    <h3>Script Supervisor | Jonah Kensett</h3>
+    <h3>PAs | Shana Sophia & Kayleigh Bispham</h3>
+
+    <div class = "footer">© 2025, Eilidh Evans. All rights reserved. &emsp; &emsp;Website designed by Portfolio Pages.</div>
+
+    
+    <script>
+        const max_index = [11,0,0];
+        var current_media = [0,0];
+        
+        function updateExpandedImage(code,img_no){
+        if (code == 0){
+            document.querySelector('.expanded-tile').style.backgroundImage = "url(media/beth-complex/slide_p_"+img_no+".jpg)";
+        } else if (code == 1){
+            document.querySelector('.expanded-tile').style.backgroundImage = "url(media/beth-complex/slide_r_"+img_no+".jpg)";
+        } else if (code == 2){
+            document.querySelector('.expanded-tile').style.backgroundImage = "url(media/beth-complex/slide_v_"+img_no+".mp4)";
+        }
+    }
+    </script>
+    
+</body>
+
+</html>

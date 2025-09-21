@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eilidh Evans Director</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- <script src="script.js" defer></script> -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+<body>
+    <div class = "navbar" id = "one">
+        <div class = "buffer">1</div>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="theatre.html">THEATRE</a>
+        <a href="film.html">FILM</a>
+        <a href="facilitation.html">FACILITATION</a>
+        <a href="contact.html">CONTACT</a>
+        <div class = "buffer">2</div>
+    </div>
+    <h1 id = "two">Contact</h1>
+    <div id = "buffer_1"></div>
+    <div id = "three">
+        <h3>CV<br> <br>
+            <iframe src="media/cv.pdf" style="width: 60vw; border-radius: 10px;"></iframe>
+        </h3>
+        <h3 class = "link" style = "margin-bottom: 10px;" onclick="location.href='mailto:eilidh.ea.evans@gmail.com';">eilidh.ea.evans@gmail.com</h3>
+        <h3 class = "link" onclick="location.href='https://www.instagram.com/eilidh_evs/';"><i class="fa">&#xf16d;</i> : @eilidh_evs</h3>
+
+    </div>
+
+    <div id = "buffer_2"></div>
+
+    <div class = "footer" id = "four" style="padding-bottom: 5px;">© 2025, Eilidh Evans. All rights reserved. &emsp; &emsp;Website designed by Portfolio Pages.</div>
+    
+    <script>
+        window.onload = addBuffer;
+        function addBuffer(){
+            oneHeight = document.getElementById("one").offsetHeight;
+            twoHeight = document.getElementById("two").scrollHeight;
+            threeHeight = document.getElementById("three").offsetHeight;
+            fourHeight = document.getElementById("four").offsetHeight;
+
+            difference = window.innerHeight - (window.innerWidth * 0.03) - oneHeight - twoHeight - threeHeight - fourHeight - 28;
+            
+            if (difference > 0){
+                document.getElementById("buffer_1").style.height = (difference / 2)+"px";
+                document.getElementById("buffer_2").style.height = (difference / 2)+"px";
+            }
+            else{
+                document.getElementById("buffer_1").style.height = "0px";
+                document.getElementById("buffer_2").style.height = "0px";
+            }
+        }
+
+        window.onresize = addBuffer;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eilidh Evans Director</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- <script src="script.js" defer></script> -->
+</head> 
+<style>
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        /* gap: 0 10px;
+        padding: 0 10px; */
+        /* justify-content: center; */
+    }
+
+    .photos{
+        max-width: 24vw;
+        flex: 24vw;
+        margin-left: 6vw;
+        padding: 0px;
+        height: fit-content;
+    }
+
+    .photos img{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        gap: 0px;
+    }
+
+    .text{
+        margin-left: 3vw;
+        margin-right: 6vw;
+        max-width: 60vw;
+        font-size: 30px;
+        height: fit-content;
+    }
+</style>
+<body>
+    <div class = "navbar">
+        <div class = "buffer">1</div>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="theatre.html">THEATRE</a>
+        <a href="film.html">FILM</a>
+        <a href="facilitation.html">FACILITATION</a>
+        <a href="contact.html">CONTACT</a>
+        <div class = "buffer">2</div>
+    </div>
+    <h1>ABOUT</h1>
+
+    <div class = "container">
+        <div id = "marker" class = "photos">
+            <!-- <div id = "marker"></div> -->
+            <!-- <img src = "media/about/headshot_0.jpg">
+            <img src = "media/about/headshot_1.jpg">
+            <img src = "media/about/headshot_2.jpg">
+            <img src = "media/about/headshot_3.jpg">
+            <img src = "media/about/headshot_4.jpg"> -->
+        </div>
+        <div class = "text">
+            Eilidh is an award-winning theatre director and dramaturg of Scottish descent with
+            experience across musicals and new writing who currently works between London
+            and her hometown of Birmingham. <br> <br>
+            Eilidh enjoys work that feeds off current political discourse to inspire innovation and
+            deliver theatrical art back into its accessible and community-led origins. She is
+            passionate about new writing, championing regional artists, and using theatre as an
+            instrument for social change. <br> <br>
+            Eilidh has directed and assisted on productions in the West End, across the UK, and
+            on international transfers including at the London Palladium, Tokyu Theatre Orb,
+            Omnibus, and Blue Orange Theatre. Recently Associate Director on Dirty Rotten
+            Scoundrels (Palladium / Tokyu Theatre Orb), and Director of The Things We Forget
+            To Change which was awarded 2025 Best New Piece by Birmingham Fest.
+        <div class = "text" style="text-align: center; margin-top: 40px; margin-bottom: 40px; border-radius: 10px; border-style: solid; border-color: #800000; width: 90%;">
+            PRESS | The Things We Forget To Change, Blue Orange Theatre | July 2025 <br> <br>
+            “A gripping, entertaining hour that evokes an emotional response to a serious (and
+            common) issue” - Bum on a Seat ★★★★★ <br> <br>
+            “Engaging, relevant, and gripping” - Curtain Call ★★★★ <br> <br>
+            “Taut and relevant drama” - Bum on a Seat ★★★★★
+        </div>
+            As a dramaturg Eilidh has extensive experience collaborating with emerging writers
+            on productions and is a Co-Founder of Camino Meets, a free monthly script
+            development programme that she co-leads with the award-winning playwright Chris
+            Fung. She is passionate about championing writers by improving access to
+            opportunity and aims to nurture their skills through regular script reads, dramaturgy,
+            and networking opportunities to build a creative team.
+        </div>
+    </div>
+
+    <div class = "footer">© 2025, Eilidh Evans. All rights reserved. &emsp; &emsp;Website designed by Portfolio Pages.</div>
+
+    <script type="text/javascript">
+        window.onload = arrangeImages;
+        var imageRatios = [1.5, 0.580804, 1.5, 0.666667, 1.227552]
+        function arrangeImages(){
+            text_height = document.querySelector('.text').clientHeight;
+            photo_width = document.querySelector('.photos').clientWidth;
+
+            var imageHeights = [];
+            num_photos = imageRatios.length
+            for(var i = 0; i < num_photos; i++){
+                imageHeights.push(Math.round(imageRatios[i] * photo_width) + 4);
+            }
+            
+            var to_fit = 0;
+            var j = 0;
+            while(text_height > 0){
+                text_height -= imageHeights[j];
+                j += 1;
+                j = j % num_photos;
+                to_fit += 1
+            }
+
+            var photos = document.getElementById('marker');
+            photos.innerHTML = ""
+            for(var i = 0; i < to_fit; i++){
+                photos.innerHTML += '<img src = "media/about/headshot_'+ i % num_photos +'.jpg">';
+            }
+        }
+
+        window.onresize = arrangeImages;
+    </script>
+
+</body>
+
+</html>
