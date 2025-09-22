@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eilidh Evans Director</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
 </head> 
 <body>
@@ -22,14 +23,13 @@
     </div>
 
     <div class = "navbar">
-        <div class = "buffer">1</div>
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT</a>
         <a href="theatre.html">THEATRE</a>
         <a href="film.html">FILM</a>
         <a href="facilitation.html">FACILITATION</a>
         <a href="contact.html">CONTACT</a>
-        <div class = "buffer">2</div>
+        <div class = "icon" onclick = "phoneMenu()"><i id = "menuIcon" class="fa fa-bars"></i></div>
     </div>
     <h1>Things We Forget to Change</h1>
     <h2>Director | The Blue Orange Theatre, 2025</h2>
@@ -84,64 +84,6 @@
             }
         }
     </script>
-
-    <!-- <script>
-    document.getElementById("focused").click();
-    document.getElementById("focused").focus();
-    function mediaSelect(selected) {
-        let medias = document.querySelectorAll(".media"); 
-        medias.forEach(item => {
-            if (selected == "all" || item.classList.contains(selected)) {
-                item.style.display = "flex";
-            } else {
-                item.style.display = "none";
-            }
-            })
-    }
-    
-    let tiles = document.querySelectorAll(".tile");
-
-    function set_current_media(code,img_no){
-        current_media = [code,img_no];
-    }
-
-    function next_slide(){
-        let code = current_media[0];
-        let img_no = current_media[1];
-        let x = (img_no + 1) % max_index[code];
-        set_current_media(code,x);
-        updateExpandedImage(code,x);
-    }
-
-    function previous_slide(){
-        let code = current_media[0];
-        let img_no = current_media[1];
-        let x = img_no - 1;
-        if (x < 0) {x += max_index[code]};
-        set_current_media(code,x);
-        updateExpandedImage(code,x);
-    }
-
-    function unexpand() {
-        // deactivate overlay:
-        document.querySelector('.expanded-tile').classList.remove('active');
-        document.querySelector('.expand-overlay').classList.remove('active');
-        document.querySelector('.left-button').classList.remove('active');
-        document.querySelector('.right-button').classList.remove('active');
-        document.querySelector('.close-button').classList.remove('active');
-    }
-
-    function expand(code, img_no) {
-        document.querySelector('.expand-overlay').classList.add('active');
-        set_current_media(code, img_no);
-        updateExpandedImage(code, img_no)
-        document.querySelector('.expanded-tile').classList.add('active');
-        document.querySelector('.left-button').classList.add('active');
-        document.querySelector('.right-button').classList.add('active');
-        document.querySelector('.close-button').classList.add('active');
-    }
-
-    </script> -->
     
 </body>
 

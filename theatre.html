@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eilidh Evans Director</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
 </head> 
 <body>
@@ -17,14 +18,13 @@
     </div>
 
     <div class = "navbar">
-        <div class = "buffer">1</div>
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT</a>
         <a href="theatre.html">THEATRE</a>
         <a href="film.html">FILM</a>
         <a href="facilitation.html">FACILITATION</a>
         <a href="contact.html">CONTACT</a>
-        <div class = "buffer">2</div>
+        <div class = "icon" onclick = "phoneMenu()"><i id = "menuIcon" class="fa fa-bars"></i></div>
     </div>
     <h1>THEATRE</h1>
     <div class = "role-bar">
@@ -79,89 +79,6 @@
     </div>
 
     <div class = "footer" onclick="location.href = 'https://qwerty54637.github.io/portfolio-pages/';">© 2025, Eilidh Evans. All rights reserved. &emsp; &emsp;Website designed by Portfolio Pages.</div>
-
-    <!-- <div class = "role-bar">
-        <div class = "buffer">1</div>
-        <button onclick="roleSelect('all')">All</button>
-        <button onclick="roleSelect('director')">Director</button>
-        <button onclick="roleSelect('assistant')">Assistant Director</button>
-        <button onclick="roleSelect('associate')">Associate Director</button>
-        <div class = "buffer">2</div>
-    </div> -->
-    <!-- <script>
-    function roleSelect(role) {
-        let tiles = document.querySelectorAll(".tile"); 
-        tiles.forEach(item => {
-            if (role == "all" || item.classList.contains(role)) {
-                item.style.display = "flex";
-            } else {
-                item.style.display = "none";
-            }
-            })
-    }
-    </script>
-    
-    <script>
-    
-    let tiles = document.querySelectorAll(".tile");
-
-    const current_index = [0,0,0,0,0,0,0];
-    const max_index = [1,1,1,1,1,1,5]; // number of slides per tile - 1
-    var current_tile;
-
-    function set_current_tile(tile_no){
-        current_tile = tile_no;
-    }
-
-    function next_slide(){
-        let tile_no = current_tile;
-        let x = (current_index[tile_no] + 1) % max_index[tile_no];
-        current_index[tile_no] = x;
-        updateExpandedImage(tile_no,x);
-        // changeImage(tile_no,x);
-    }
-
-    function previous_slide(){
-        let tile_no = current_tile;
-        let x = (current_index[tile_no] - 1);
-        if (x < 0) {x += max_index[tile_no]};
-        current_index[tile_no] = x;
-        updateExpandedImage(tile_no,x);
-        // changeImage(tile_no,x);
-    }
-
-    // function changeImage(tile_no,img_no){
-    //     tile = document.getElementById("tile"+tile_no);
-    //     tile.style.backgroundImage = "url(media/slides/slide_"+tile_no+"_"+img_no+".JPG)";
-    // }
-
-    function updateExpandedImage(tile_no,img_no){
-        document.querySelector('.expanded-tile').style.backgroundImage = "url(media/theatre/slide_"+tile_no+"_"+img_no+".JPG)";
-    }
-
-    function unexpand() {
-        // deactivate overlay:
-        document.querySelector('.expanded-tile').classList.remove('active');
-        document.querySelector('.expand-overlay').classList.remove('active');
-        document.querySelector('.left-button').classList.remove('active');
-        document.querySelector('.right-button').classList.remove('active');
-        document.querySelector('.close-button').classList.remove('active');
-        // tiles.forEach(tile => {
-        //     tile.classList.remove('expanded');
-        // });
-    }
-
-    function expand(tile_no) {
-        document.querySelector('.expand-overlay').classList.add('active');
-        set_current_tile(tile_no);
-        updateExpandedImage(tile_no,0)
-        document.querySelector('.expanded-tile').classList.add('active');
-        document.querySelector('.left-button').classList.add('active');
-        document.querySelector('.right-button').classList.add('active');
-        document.querySelector('.close-button').classList.add('active');
-    }
-
-    </script> -->
     
 </body>
 

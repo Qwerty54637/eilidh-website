@@ -54,6 +54,17 @@ window.onkeyup = function (event) {
     }
 }
 
+function phoneMenu(){
+    var x = document.querySelector(".navbar");
+    if (x.className === "navbar") {
+        x.className += " phone";
+        document.getElementById("menuIcon").className = "fa fa-times"
+    } else {
+        x.className = "navbar";
+        document.getElementById("menuIcon").className = "fa fa-bars"
+    }
+}
+
 function unexpand() {
     // deactivate overlay:
     document.querySelector('.expanded-tile').classList.remove('active');
