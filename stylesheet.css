@@ -163,7 +163,7 @@ h3{
 
 .media-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(23vw, 1fr));
+    grid-template-columns: repeat(4, auto);
     gap: 20px;
     padding: 20px;
     margin-top: 1vh;
@@ -453,6 +453,18 @@ iframe:hover{
   transform: scale(1.03);
 }
 
+@media screen and (max-width: 1200px) {
+  .media-grid{
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .media-grid{
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 1000px) {
   .media-column {
@@ -466,5 +478,8 @@ iframe:hover{
   .media-column {
     flex: 94vw;
     max-width: 94vw;
+  }
+  .media-grid{
+    grid-template-columns: repeat(1, auto);
   }
 }
