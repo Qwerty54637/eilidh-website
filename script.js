@@ -27,50 +27,50 @@ function roleSelect(role) {
             })
 }
 
-    function next_slide(){
-        let code = current_media[0];
-        let img_no = current_media[1];
-        let x = (img_no + 1) % max_index[code];
-        set_current_media(code,x);
-        updateExpandedImage(code,x);
-    }
+function next_slide(){
+    let code = current_media[0];
+    let img_no = current_media[1];
+    let x = (img_no + 1) % max_index[code];
+    set_current_media(code,x);
+    updateExpandedImage(code,x);
+}
 
-    function previous_slide(){
-        let code = current_media[0];
-        let img_no = current_media[1];
-        let x = img_no - 1;
-        if (x < 0) {x += max_index[code]};
-        set_current_media(code,x);
-        updateExpandedImage(code,x);
-    }
+function previous_slide(){
+    let code = current_media[0];
+    let img_no = current_media[1];
+    let x = img_no - 1;
+    if (x < 0) {x += max_index[code]};
+    set_current_media(code,x);
+    updateExpandedImage(code,x);
+}
 
-    window.onkeyup = function (event) {
-        if (event.keyCode == 27) {
-            unexpand();
-        } else if (event.keyCode == 37) {
-            previous_slide();
-        } else if (event.keyCode == 39) {
-            next_slide();
-        }
+window.onkeyup = function (event) {
+    if (event.keyCode == 27) {
+        unexpand();
+    } else if (event.keyCode == 37) {
+        previous_slide();
+    } else if (event.keyCode == 39) {
+        next_slide();
     }
+}
 
-    function unexpand() {
-        // deactivate overlay:
-        document.querySelector('.expanded-tile').classList.remove('active');
-        document.querySelector('.expand-overlay').classList.remove('active');
-        document.querySelector('.left-button').classList.remove('active');
-        document.querySelector('.right-button').classList.remove('active');
-        document.querySelector('.close-button').classList.remove('active');
-        document.querySelector('.expanded-video').classList.remove('active');
-        document.getElementById("video").pause();
-    }
+function unexpand() {
+    // deactivate overlay:
+    document.querySelector('.expanded-tile').classList.remove('active');
+    document.querySelector('.expand-overlay').classList.remove('active');
+    document.querySelector('.left-button').classList.remove('active');
+    document.querySelector('.right-button').classList.remove('active');
+    document.querySelector('.close-button').classList.remove('active');
+    document.querySelector('.expanded-video').classList.remove('active');
+    document.getElementById("video").pause();
+}
 
-    function expand(code, img_no) {
-        document.querySelector('.expand-overlay').classList.add('active');
-        set_current_media(code, img_no);
-        updateExpandedImage(code, img_no)
-        document.querySelector('.expanded-tile').classList.add('active');
-        document.querySelector('.left-button').classList.add('active');
-        document.querySelector('.right-button').classList.add('active');
-        document.querySelector('.close-button').classList.add('active');
-    }
+function expand(code, img_no) {
+    document.querySelector('.expand-overlay').classList.add('active');
+    set_current_media(code, img_no);
+    updateExpandedImage(code, img_no)
+    document.querySelector('.expanded-tile').classList.add('active');
+    document.querySelector('.left-button').classList.add('active');
+    document.querySelector('.right-button').classList.add('active');
+    document.querySelector('.close-button').classList.add('active');
+}
