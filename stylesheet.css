@@ -465,6 +465,22 @@ iframe:hover{
   }
 }
 
+@media screen and (max-width: 800px) {
+  .tile{
+    color: rgba(255, 255, 255, 1);
+    text-shadow: -1px -1px 0 var(--text-trim-dark), 1px -1px 0 var(--text-trim-dark), -1px 1px 0 var(--text-trim-dark), 1px 1px 0 var(--text-trim-dark);
+  }
+  .tile h1{
+    font-size: large;
+  }
+  .tile h2{
+    font-size: medium;
+  }
+  .tile-grid{
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 1000px) {
   .media-column {
