@@ -172,8 +172,8 @@ h3{
 .tile-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28vw, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 2vw;
+    padding: 2vw;
     margin-top: 1vh;
 }
 
@@ -477,7 +477,7 @@ iframe:hover{
     font-size: medium;
   }
   .tile-grid{
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, minmax(46vw, 1fr));
   }
 }
 
