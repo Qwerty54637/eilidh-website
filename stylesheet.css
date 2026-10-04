@@ -4,11 +4,13 @@
     --text-trim-dark: #333;
 }
 body, html {
-    font-family: 'Cambria', serif;
+    font-family: 'Segoe UI';
     height: 100%;
     margin: 0;
     overflow-x: hidden;
     text-align: center;
+    background-color: #000;
+    color: #fff;
 }
 
 .navbar {
@@ -97,7 +99,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
-    background: rgba(255, 255, 255, 1);
+    background: rgba(0,0,0, 1);
     transition: 0.3s ease;
     overflow: hidden;
     width: 100%;
@@ -114,9 +116,9 @@ body, html {
 } */
 
 .role-bar button{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Segoe UI';
     font-size: medium;
-    color: #000;
+    color: #fff;
     transition: 0.2s ease;
     background: none;
     border: none;
@@ -126,12 +128,12 @@ body, html {
 
 .role-bar button:hover{
     font-size: large;
-    color: black;
+    color: #fff;
 }
 
 .role-bar button:focus{
     font-size: x-large;
-    color: black;
+    color: #fff;
     outline: none;
 }
 
