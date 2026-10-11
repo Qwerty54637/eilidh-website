@@ -10,6 +10,7 @@
     <script src="script.js" defer></script>
 </head> 
 <body>
+<div id="foot-wrapper">
     <div class = "navbar">
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT</a>
@@ -21,18 +22,19 @@
     </div>
     <h1>FACILITATION</h1>
 
-    <div class="tile-grid">
+    <div class="tile-grid" style = "grid-template-columns: repeat(auto-fit, minmax(28vw, 1fr));">
         <div class = "tile" onclick="location.href='camino-meets.html';" style="background-image: url(media/facilitation/tile_1.jpg);">
             <h1>Camino Meets</h1>
             <h2>Meet Director & Dramaturg | Script Development</h2>
         </div>
-        <div class = "tile" onclick="location.href='creative-collective.html';" style="background-image: url(media/facilitation/tile_0.jpg);">
+        <div class = "tile" onclick="location.href='creative-collective.html';" style="background-image: url(media/facilitation/tile_0.jpg); min-width: 28vw; max-width: 49vw;">
             <h1>The Creative Collective</h1>
             <h2>Workshop Director, 2022-2023</h2>
         </div>
     </div>
 
-    <div class = "footer">© 2025-2026, Eilidh Evans. All rights reserved.</div>
+        <div class = "footer" style = "bottom: 0; left: 0; position: absolute;">© 2025-2026, Eilidh Evans. All rights reserved.</div>
+</div>
 </body>
 
 </html>

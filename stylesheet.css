@@ -24,6 +24,13 @@ body, html {
     min-height: 30px;
 }
 
+#foot-wrapper{
+    padding: 0 0 74px;
+    position: relative;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
 .footer{
     text-align: center;
     width: 100vw;
@@ -35,6 +42,10 @@ body, html {
     font-size: large;
     margin-top: 10px;
     cursor: pointer;
+}
+
+.footer.phone{
+    font-size: medium;
 }
 
 .navbar:hover, .footer:hover{
@@ -171,14 +182,6 @@ h3{
     margin-top: 1vh;
 }
 
-.tile-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(28vw, 1fr));
-    gap: 2vw;
-    padding: 2vw;
-    margin-top: 1vh;
-}
-
 .media {
     width: 100%;
     /* min-width: 23vw;
@@ -202,7 +205,16 @@ h3{
 
 }
 
+.tile-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28vw, 1fr));
+    gap: 2vw;
+    padding: 2vw;
+    margin-top: 1vh;
+}
+
 .tile{
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -221,6 +233,18 @@ h3{
     justify-content: center;
     align-items: center;
     /* text-shadow: -1px -1px 0 var(--text-trim-dark), 1px -1px 0 var(--text-trim-dark), -1px 1px 0 var(--text-trim-dark), 1px 1px 0 var(--text-trim-dark); */
+}
+
+.tile-grid.phone{
+    grid-template-columns: repeat(auto-fit, auto);
+}
+
+.tile.phone{
+    max-width: 100vw;
+}
+
+.tile.phone h2{
+    display: none;
 }
 
 .tile h1{
